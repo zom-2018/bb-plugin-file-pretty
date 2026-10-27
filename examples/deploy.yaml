@@ -1,0 +1,21 @@
+# Deployment settings for the demo service.
+defaults: &defaults
+  replicas: 2   # two pods for failover
+  resources:
+    cpu: "500m"
+    memory: 512Mi
+
+web:
+  <<: *defaults
+  image: registry.example.com/web:1.4.0
+  ports: [80, 443]
+  env:
+    - name: LOG_LEVEL
+      value: info
+worker:
+  <<: *defaults
+  replicas: 1
+  command: ["node", "worker.js"]
+  description: >
+    Consumes the job queue.
+    Restarts on failure.

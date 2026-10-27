@@ -1,0 +1,39 @@
+{
+  "name": "bb-plugin-file-pretty",
+  "version": "0.1.0",
+  "description": "Format structured files in BB's file viewer and switch between formatted and raw content.",
+  "license": "MIT",
+  "author": { "name": "Oleg", "url": "https://github.com/zom-2018" },
+  "homepage": "https://github.com/zom-2018/bb-plugin-file-pretty#readme",
+  "repository": { "type": "git", "url": "https://github.com/zom-2018/bb-plugin-file-pretty.git" },
+  "bugs": { "url": "https://github.com/zom-2018/bb-plugin-file-pretty/issues" },
+  "type": "module",
+  "engines": {
+    "bb": ">=0.46",
+    "bbPluginSdk": ">=0.6.54"
+  },
+  "bb": {
+    "name": "Pretty",
+    "description": "Formats JSON, JSONL, YAML, TOML, and XML in the BB file viewer, with a Formatted and Raw toggle.",
+    "branding": {
+      "icon": "Braces"
+    },
+    "server": "./server.ts",
+    "app": "./app.tsx"
+  },
+  "dependencies": {
+    "fast-xml-parser": "^5.11.2",
+    "jsonc-parser": "^3.3.1",
+    "smol-toml": "^1.4.2",
+    "xml-formatter": "^3.6.5",
+    "yaml": "^2.8.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@get-bb/plugin-sdk": "0.6.54",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.7.0"
+  }
+}

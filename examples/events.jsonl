@@ -1,0 +1,4 @@
+{"ts":"2026-10-20T09:00:01Z","level":"info","msg":"server started","port":8080}
+{"ts":"2026-10-20T09:00:04Z","level":"warn","msg":"slow query","ms":1240,"query":"select * from orders"}
+
+{"ts":"2026-10-20T09:01:17Z","level":"error","msg":"payment failed","order":{"id":"A-1042","amount":19.9},"tags":["billing","retry"]}
